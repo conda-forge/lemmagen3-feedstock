@@ -1,5 +1,5 @@
 {% set name = "lemmagen3" %}
-{% set version = "3.3.1" %}
+{% set version = "3.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7c439329a70679f990c559bdd101367970f5954f3298f73d0a5d6373aabdb9b0
+  sha256: ea88af23243ab9ad9a0303b50648ac62107513adb8d0de655ee0200596c11e7f
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
@@ -38,7 +38,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A Python2/3 wrapper for Lemmagen lemmatizer supporting 19 languages.'
+  summary: A Python2/3 wrapper for Lemmagen lemmatizer supporting 19 languages.
   description: |
     lemmagen3 is a Python2/3 wrapper for the Lemmagen lemmatizer.
     It is different from other Lemmagen wrappersbecause it offers a clean, fast OO interface built 
