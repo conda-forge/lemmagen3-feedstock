@@ -1,5 +1,5 @@
 {% set name = "lemmagen3" %}
-{% set version = "3.3.2" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ea88af23243ab9ad9a0303b50648ac62107513adb8d0de655ee0200596c11e7f
+  sha256: a7e7d16484704a0b99ed9f7ae2782193544197fb0fd9d49c6d131810c80c0e61
 
 build:
-  number: 3
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
