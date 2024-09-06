@@ -10,12 +10,13 @@ source:
   sha256: 11b7244cf7f71cde6a3a1d7d1b2b9fbd6d6a15bf9e9b5eab3933d930bfa69e57
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - python
